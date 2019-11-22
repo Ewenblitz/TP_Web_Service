@@ -8,6 +8,7 @@ use phpDocumentor\Reflection\Types\Integer;
 use Tymon\JWTAuth\Facades\JWTAuth;
 use Tymon\JWTAuth\Facades\JWTFactory;
 use Tymon\JWTAuth\JWT;
+use App\Http\Controllers\Controller;
 
 class AuthController extends Controller
 {

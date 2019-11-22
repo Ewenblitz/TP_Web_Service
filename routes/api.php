@@ -15,4 +15,12 @@ use Illuminate\Http\Request;
 
 Route::post('register', 'AuthController@register');
 Route::post('login', 'AuthController@login');
-Route::post('logout', 'AuthController@logout');
+
+Route::middleware('jwt.auth')->group( function() {
+
+    Route::post('logout', 'AuthController@logout');
+
+    Route::post('balance', 'BankController@updateBalance');
+    Route::post('tranfer', 'BankController@transfer');
+});
+
